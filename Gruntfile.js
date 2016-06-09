@@ -216,7 +216,7 @@ module.exports = function (grunt) {
 		'autoprefixer',
 		'cssmin',
 		'uglify',
-		'imagemin',
+		/*'imagemin',*/
 		'browserSync',
 		'watch'
 	]);
