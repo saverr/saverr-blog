@@ -634,6 +634,12 @@ address {
   /* Above WP toolbar */
 }
 
+blockquote {
+  padding: 0 0 0 1.5em;
+  border-left: 0.3em solid;
+  font-style: italic;
+}
+
 /* ==========================================================================
    Clearings
    ========================================================================== */
@@ -938,6 +944,10 @@ address {
   font-weight: 100;
   padding: 1em;
   margin: 6%;
+}
+
+.post {
+  line-height: 1.5;
 }
 
 .post-edit-link {
