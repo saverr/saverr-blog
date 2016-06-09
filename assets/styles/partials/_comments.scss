@@ -5,6 +5,30 @@
 .comment-content a {
 	word-wrap: break-word;
 }
+.comment {
+	&s {
+		&-title {
+			margin: 2em 0;
+			font-weight: 100;
+			font-size: 2.2em;
+		}
+		&-area {
+			margin-top: 4em;
+			border-top: 0.6em solid #353535;
+			padding: 3em 0;
+		}
+	}
+	background: rgba(27, 27, 27, 0.8);
+	padding: 1.4em 2em;
+	&-reply {
+		&-link {
+			text-transform: uppercase;
+		}
+	}
+}
 
+.reply {
+	text-align: right;
+}
 .bypostauthor {
 }

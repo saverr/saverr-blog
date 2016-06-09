@@ -4,7 +4,6 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 	ul {
 		list-style: none;
@@ -25,8 +24,11 @@
 		}
 	}
 	li {
-		float: left;
+		display: inline-block;
 		position: relative;
+		& + li {
+			margin-left: 1em;
+		}
 		&:hover {
 			> ul {
 				display: block;
@@ -35,7 +37,24 @@
 	}
 	a {
 		display: block;
+		font-size: 1.4em;
 		text-decoration: none;
+		padding: 0.7em 0.5em;
+		text-transform: uppercase;
+		font-weight: inherit;
+		color: #000;
+		border-bottom: 0.3em solid;
+		transition: 0.3s ease border-color, 0.3s ease opacity;
+		opacity: 0.9;
+		&:hover, &:active, &.active {
+			color: #3e3e3e - 24;
+		}
+	}
+}
+
+.nav-menu {
+	li {
+
 	}
 }
 /* Small menu */
@@ -48,6 +67,7 @@
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
+		width: 100%;
 	}
 
 	.main-navigation ul {

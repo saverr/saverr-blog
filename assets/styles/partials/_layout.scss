@@ -3,27 +3,84 @@
    ========================================================================== */
 
 #page {
-	max-width: $pageWidth;
-	margin: 1.5em auto;
+}
+
+%content-item {
+	@include bp(desktop) {
+		display: table-cell;
+		vertical-align: top;
+	}
 }
 
 .content-area {
-	float: left;
-	margin: 0 -25% 0 0;
+	@extend %content-item;
 	width: 100%;
+	padding: 2em;
 }
 
 .site-main {
-	margin: 0 25% 0 0;
+
 }
 
-.site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: 25%;
+.site-content {
+	background: #23282d;
+	color: #fff;
+	padding: 2em $pagePadding;
+	.widget-area {
+		@extend %content-item;
+		&-container {
+			box-shadow: 0 0 2.5em -1em black;
+			background: #222;
+			border-radius: 0.3em;
+			padding: 2em;
+		}
+	}
 }
-
+.widget {
+	&-title {
+		font-weight: 100;
+		white-space: nowrap;
+	}
+}
 .site-footer {
-	clear: both;
-	width: 100%;
+	text-align: center;
+	small {
+		opacity: 0.8;
+	}
+}
+
+.site-header {
+	background: $brandPink;
+	color: #fff;
+	padding: 1em $pagePadding;
+}
+
+.search {
+	&-field {
+		font-size: 1.4em;
+		border: inherit;
+		padding: 0.4em 1em;
+		color: inherit;
+		border-radius: 4em;
+	}
+}
+
+.comment {
+	&-form {
+		&-comment {
+			label {
+				display: block;
+				line-height: 2;
+				margin-bottom: 0.5em;
+			}
+			textarea {
+				width: 100%;
+				opacity: 0.7;
+				transition: 0.3s ease opacity, 0.3s ease transform, 0.3s ease border-color;
+				&:focus {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }

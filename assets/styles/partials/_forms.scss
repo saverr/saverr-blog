@@ -1,8 +1,59 @@
 /* ==========================================================================
    Forms
    ========================================================================== */
+input, textarea {
+	background: transparentize(black, 0.2);
+	font-size: inherit;
+	border: $borderStyle;
+	outline: none;
+	transition: 0.3s ease border-color;
+	color: inherit;
+	font-family: inherit;
+	&::-moz-placeholder, &::-webkit-input-placeholder {
+		color: $textColour + 25;
+	}
 
-form {
+	&:focus {
+		border-color: $brandPink;
+	}
+}
+
+textarea {
+	padding: 0.4em 1em;
+}
+
+label {
+	text-transform: uppercase;
+	font-weight: 100;
+	font-size: 1.1em;
+	letter-spacing: 1pt;
+}
+button {
+	background: transparent;
+	border: $borderStyle;
+	color: $darkGrey;
+	display: inline-block;
+	font-family: inherit;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	padding: 0.8em 1.7em;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.3s ease border-color, 0.3s ease background, 0.2s ease color;
+	white-space: nowrap;
+
+	i, span {
+		vertical-align: middle;
+	}
+
+	span {
+		margin-left: 0.5em;
+	}
+
+	&:hover {
+		background: $darkGrey;
+		color: #fff;
+	}
 }
 
 /* Gravity Forms */
@@ -32,4 +83,8 @@ form {
 }
 
 .gform_button {
+}
+
+input {
+
 }

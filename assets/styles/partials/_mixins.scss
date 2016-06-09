@@ -7,6 +7,11 @@
  * @include bp(tablet) { SCSS here };
 */
 @mixin bp($point) {
+	@if $point == desktop {
+		@media (min-width: 50em) {
+			@content;
+		}
+	}
 	@if $point == biggie {
 		@media (max-width: 75em) {
 			@content;

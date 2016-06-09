@@ -2,6 +2,38 @@
    Posts and pages
    ========================================================================== */
 
+.entry {
+	&-header {
+		@include clearfix;
+	}
+	&-footer {
+		padding: 2em;
+		background: #262626;
+	}
+	&-title {
+		font-weight: inherit;
+		letter-spacing: 1pt;
+		font-size: 3.5em;
+		float: left;
+	}
+	&-meta {
+		float: right;
+		text-transform: uppercase;
+		font-weight: 100;
+		padding: 1em;
+		margin: 6%;
+	}
+}
+.post-edit-link {
+	border: 0.2em solid transparent;
+	transition: 0.3s ease border-color, 0.3s ease color;
+	float: right;
+	text-transform: uppercase;
+	padding: 0.4em 1.1em;
+	&:hover {
+		border-color: inherit;
+	}
+}
 .sticky {
 }
 
@@ -23,6 +55,7 @@
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+	font-size: 1.4em;
 }
 
 .page-links {
