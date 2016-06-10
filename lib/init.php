@@ -117,6 +117,12 @@ if (!function_exists('_mbbasetheme_setup')) :
 		// Function location: /lib/theme-functions.php
 		add_filter('the_content_more_link', 'mb_remove_more_jump_link');
 
+		function cc_mime_types($mimes) {
+			$mimes['svg'] = 'image/svg+xml';
+			return $mimes;
+		}
+		add_filter('upload_mimes', 'cc_mime_types');
+
 	}
 endif; // _mbbasetheme_setup
 
