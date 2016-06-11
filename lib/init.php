@@ -37,6 +37,8 @@ if (!function_exists('_mbbasetheme_setup')) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support('automatic-feed-links');
 
+		// allow header to be customized
+		add_theme_support('custom-header');
 		// Register nav menus
 		register_nav_menus(array(
 			'primary' => __('Primary Menu', '_mbbasetheme'),
